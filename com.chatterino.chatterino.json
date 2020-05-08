@@ -1,0 +1,57 @@
+{
+    "app-id": "com.chatterino.chatterino",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.14",
+    "sdk": "org.kde.Sdk",
+    "command": "chatterino",
+    "rename-icon": "chatterino",
+    "finish-args": [
+        "--socket=x11",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--share=network",
+        "--device=dri"
+    ],
+    "modules": [
+        {
+            "name": "boost",
+            "buildsystem": "simple",
+            "build-commands": [
+                "./bootstrap.sh --prefix=/app --with-libraries=filesystem,system",
+                "./b2 -j $(nproc) --build-type=minimal link=shared",
+                "./b2 -j $(nproc) --build-type=minimal link=shared install"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://dl.bintray.com/boostorg/release/1.73.0/source/boost_1_73_0.tar.gz",
+                    "sha256": "9995e192e68528793755692917f9eb6422f3052a53c5e13ba278a228af6c7acf"
+                }
+            ],
+            "cleanup": [
+                "/include"
+            ]
+        },
+        {
+            "name": "chatterino",
+            "buildsystem": "simple",
+            "build-commands": [
+                "echo -e \"\nlinux {\n    LIBS += -L/app/lib\n}\n\" >> chatterino.pro",
+                "qmake",
+                "make -j $(nproc)",
+                "install -Dm755 bin/chatterino /app/bin/chatterino",
+                "install -Dm644 resources/com.chatterino.chatterino.appdata.xml /app/share/metainfo/com.chatterino.chatterino.appdata.xml",
+                "install -Dm644 resources/com.chatterino.chatterino.desktop /app/share/applications/com.chatterino.chatterino.desktop",
+                "install -Dm644 resources/icon.png /app/share/icons/hicolor/256x256/apps/chatterino.png"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "tag": "v2.1.7",
+                    "url": "https://github.com/Chatterino/chatterino2.git"
+                }
+            ]
+        }
+    ]
+}
+
