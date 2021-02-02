@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+    <id>tv.plex.plexamp</id>
+    <name>Plexamp</name>
+    <metadata_license>LicenseRef_Proprietary</metadata_license>
+    <summary>A beautiful Plex music player for audiophiles, curators, and hipsters</summary>
+    <description>
+        <p>
+        ** You'll need a Plex Media Server and an active Plex Pass to use this app **
+        ** From the same people who brought you the Plex app **
+        ** PS - If you’re new to Plex, download the Plex app first **
+        </p>
+        <p>
+        Plexamp is the answer to the question "what would happen if you gave a handful of Plex music and pixel nerds a few cocktails and free rein to create the app of their dreams?"
+        </p>
+        <p>
+        Plexamp is a beautiful, dedicated Plex music player with tons of goodies for audiophile purists, music curators, and music fans of all ages looking for their next aural fix.
+        </p>
+        <p>
+        SUPER AUDIO PLAYER
+        Loudness leveling, true gapless playback, Sweet Fades™, soft transitions, a configurable preamp, a parametric EQ, and more. Perfection for golden ears, buttery smooth touches for the rest of us. Custom pre-caching so your music keeps playing, because sometimes life brings you through tunnels.
+        </p>
+        <p>
+        MUSIC TO YOUR EYES
+        Experience your music collection like you’ve never seen it before, with our UltraBlur backgrounds, over a dozen hypnotic visualizers, and four visual themes to satisfy every taste.
+        </p>
+        <p>
+        FIND YOUR FIX
+        Radios built from your library and your cooler friends' collections. Travel through time, pick a style or mood, or listen album-by-album like the purist you are. Use the Mix Builder to explore and craft your perfect blend. Explore your personal charts and see what you were into last Fall or your top albums from the 60s.
+        </p>
+        <p>
+        OFFLINE BLISS
+        Grab a few hours of your favorite playlist or stations with just a few taps. Download a custom mix or artist radio for the plane. Simple but powerful offline support for when you’re in the woods or run out of cellular data.
+        </p>
+        <p>
+        IT’S THE LITTLE THINGS
+        Powerful search. Playback activity history. Swipe-up play queue peeking. Fun artist explorations. As many settings and tweaks as our resident UXpert let us add.
+        </p>
+        <p>
+        ENTERPRISE CLASS CUSTOMER RELATIONSHIP MANAGEMENT
+        Just kidding. It's a music player.
+        </p>
+        <p>
+        Follow us on Twitter @plexamp
+        </p>
+    </description>
+    <categories>
+        <category>Audio</category>
+        <category>Player</category>
+        <category>Music</category>
+    </categories>
+    <url>
+        <homepage>https://plexamp.com/</homepage>
+        <bugtracker>https://forums.plex.tv/c/testing/plex-labs/16</bugtracker>
+        <faq>https://forums.plex.tv/t/how-to-plexamp-3-0/577024</faq>
+    </url>
+    <releases>
+        <release version="3.4.1" date="2021-01-19">
+            <description>
+                <p>Lots of improvements for a 0.0.1 version change, which shows how big our plans are for the app!</p>
+                <p>
+                Added
+                </p>
+                <p>
+                Top Tracks aural fixation.
+                Speed up context menus and screen transitions.
+                Artist and album page styles/moods lead to library grid.
+                Mood/style station album browsing goes to library grid.
+                Remember last active tab.
+                Allow long press on play button to stop playback.
+                Allow signing in with 2FA.
+                Album user rating as filter field.
+                Show artist’s own popular/highly rated tracks in Related Tracks.
+                Add setting to disable library action bar blurred background.
+                </p>
+                <p>
+                Fixed
+                </p>
+                <p>
+                TIDAL playlists in Recent Plays didn’t have a poster image.
+                Occasionally audio would glitch at the start of playback.
+                Improve buffering with TIDAL items on low bandwidth connections.
+                Car: Fix double player animation for offline items.
+                Occasionally swipe-to-delete rows weren’t tappable.
+                Fix downloaded poster resolution.
+                Fix corruption with offline images (and possibly others).
+                Pending download count on tab could be different from total for items.
+                When sorting tracks by popularity, de-dupe by title.
+                Get rid of extra blank line in artist grids.
+                Properly sort downloaded items with leading “the”, “a”, etc.
+                Playing a track from library view played the album instead of queuing tracks around it.
+                Fix spacing above artist/album carousels.
+                Don’t show drop shadows until image loads, fixes weird hexagons on Android.
+                Allow deleting tracks from dumb playlists again.
+                In some cases Discovery Radio wouldn’t start.
+                The zero state text for “Best Of” Aural Fixation included the word “false”.
+                iOS: Raise buffer sizes a bit for playback stability.
+                iOS: Fix playback stopping issue in low battery/power situations.
+                iOS: Allow smaller window sizes when running on macOS.
+                iOS: Fix visualizer breaking on rotation (and sometimes returning from background) on iPad.
+                iOS: Avoid running visualizer when app is in background.
+                Android: Fix a reported media browser crash.
+                Android: Fix issue with status bar occasionally losing translucency.
+                Show TIDAL icon on albums added to library.
+                Show TIDAL icon in player for items added to library.
+                Remove year from AutoPlay albums added to Recent Plays.
+                Make sure the sort is stable for Recent Play items.
+                Allow adding TIDAL items in library to TIDAL play queue.
+                AutoPlay didn’t work when casting.
+                Android: AutoPlay didn’t work in Android Auto.
+                Android: In landscape mode, player wasn’t vertically centered.
+                Android: Fix some cases of notifications acting weirdly.
+                Downloaded playlists showed a generic icon instead of artwork.
+                Attempt to improve reliability of debug log sharing.
+                Android: Lack of icon on headphone notification.
+                Silent audio (snap-back) after restarting audio device due to failure.
+                iOS: Better clearing of now playing data when stopping.
+                Desktop: Improve playback stability.
+                In some cases a small bit of audio would come out of the speaker when disconnecting from Bluetooth.
+                Wait to render Related Tracks until tab is active (helps performance).
+                iOS: Raise buffer a bit to make playback more stable.
+                In themes other than dark, group titles on downloads could be invisible.
+                Playlist items in grid didn’t change title color along with theme.
+                </p>
+            </description>
+        </release>
+    </releases>
+</component>

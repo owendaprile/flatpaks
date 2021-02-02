@@ -24,6 +24,10 @@ modules:
         dest-filename: Plexamp.AppImage
         sha256: 56ff9ed6ae5386e5c33d7f1b69253eeff53ade9ebf76f87466f49c3b52e88fe5
 
+      - type: file
+        path: ./tv.plex.plexamp.appdata.xml
+        sha256: c926570f3128f54bfa9577751f2dc3f50cb0d2735826c9aff8f69df16fa988b8
+
       - type: script
         dest-filename: run.sh
         commands:
@@ -34,6 +38,7 @@ modules:
       - ./Plexamp.AppImage --appimage-extract > /dev/null
       - sed -i "s|Exec=AppRun|Exec=run.sh|" squashfs-root/plexamp.desktop
       - sed -i "s|Icon=plexamp|Icon=$FLATPAK_ID|" squashfs-root/plexamp.desktop
+      - install -Dm644 tv.plex.plexamp.appdata.xml "/app/share/metainfo/$FLATPAK_ID.appdata.xml"
       - install -Dm755 run.sh /app/bin/run.sh
       - install -Dm644 squashfs-root/plexamp.desktop "/app/share/applications/$FLATPAK_ID.desktop"
       - for res in "16x16" "32x32" "48x48" "64x64" "128x128" "256x256" "512x512"; do
