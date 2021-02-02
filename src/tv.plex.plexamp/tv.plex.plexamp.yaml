@@ -1,0 +1,50 @@
+app-id: tv.plex.plexamp
+branch: '3.4.1'
+runtime: org.freedesktop.Platform
+runtime-version: '20.08'
+sdk: org.freedesktop.Sdk
+command: run.sh
+base: org.electronjs.Electron2.BaseApp
+base-version: stable
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --socket=pulseaudio
+  - --share=network
+  - --device=dri
+  - --talk-name=org.freedesktop.Notifications
+  - --own-name=org.mpris.MediaPlayer2.Plexamp
+
+modules:
+  - name: plexamp
+    buildsystem: simple
+    sources:
+      - type: file
+        url: https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp-3.4.1.AppImage
+        dest-filename: Plexamp.AppImage
+        sha256: 56ff9ed6ae5386e5c33d7f1b69253eeff53ade9ebf76f87466f49c3b52e88fe5
+
+      - type: script
+        dest-filename: run.sh
+        commands:
+          - /app/main/plexamp --no-sandbox "$*"
+
+    build-commands:
+      - chmod +x Plexamp.AppImage
+      - ./Plexamp.AppImage --appimage-extract > /dev/null
+      - sed -i "s|Exec=AppRun|Exec=run.sh|" squashfs-root/plexamp.desktop
+      - sed -i "s|Icon=plexamp|Icon=$FLATPAK_ID|" squashfs-root/plexamp.desktop
+      - install -Dm755 run.sh /app/bin/run.sh
+      - install -Dm644 squashfs-root/plexamp.desktop "/app/share/applications/$FLATPAK_ID.desktop"
+      - for res in "16x16" "32x32" "48x48" "64x64" "128x128" "256x256" "512x512"; do
+            install -Dm644 squashfs-root/usr/share/icons/hicolor/$res/apps/plexamp.png /app/share/icons/hicolor/$res/apps/$FLATPAK_ID.png;
+        done
+      - mkdir -p "/app/main/"
+      - cp -r squashfs-root/* "/app/main/"
+
+    cleanup:
+      - /main/AppRun
+      - /main/plexamp.desktop
+      - /main/plexamp.png
+      - /main/resources/app-update.yml
+      - /main/usr/share
