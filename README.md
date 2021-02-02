@@ -8,3 +8,4 @@ flatpak remote-add --if-not-exists --gpg-import key.gpg owendaprile https://owen
 
 ## Available apps
 * [Chatterino](https://chatterino.com/)
+* [Plexamp](https://plexamp.com/)
