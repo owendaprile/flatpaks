@@ -1,9 +1,10 @@
 app-id: tv.plex.plexamp
-branch: '3.4.1'
+branch: stable
 runtime: org.freedesktop.Platform
 runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
 command: run.sh
+separate-locales: false
 base: org.electronjs.Electron2.BaseApp
 base-version: stable
 finish-args:
@@ -20,13 +21,12 @@ modules:
     buildsystem: simple
     sources:
       - type: file
-        url: https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp-3.4.1.AppImage
+        url: https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp-3.4.2.AppImage
         dest-filename: Plexamp.AppImage
-        sha256: 56ff9ed6ae5386e5c33d7f1b69253eeff53ade9ebf76f87466f49c3b52e88fe5
+        sha256: 819fb2d54674b3851675578bf395a7d7907320b6a5b9a11448cf9eb60d8cbe10
 
       - type: file
         path: ./tv.plex.plexamp.appdata.xml
-        sha256: c926570f3128f54bfa9577751f2dc3f50cb0d2735826c9aff8f69df16fa988b8
 
       - type: script
         dest-filename: run.sh
