@@ -4,10 +4,13 @@
     <name>Plexamp</name>
     <metadata_license>LicenseRef_Proprietary</metadata_license>
     <summary>A beautiful Plex music player for audiophiles, curators, and hipsters</summary>
+
     <description>
         <p>
         ** You'll need a Plex Media Server and an active Plex Pass to use this app **
+
         ** From the same people who brought you the Plex app **
+
         ** PS - If you’re new to Plex, download the Plex app first **
         </p>
         <p>
@@ -18,43 +21,118 @@
         </p>
         <p>
         SUPER AUDIO PLAYER
+
         Loudness leveling, true gapless playback, Sweet Fades™, soft transitions, a configurable preamp, a parametric EQ, and more. Perfection for golden ears, buttery smooth touches for the rest of us. Custom pre-caching so your music keeps playing, because sometimes life brings you through tunnels.
         </p>
         <p>
         MUSIC TO YOUR EYES
+
         Experience your music collection like you’ve never seen it before, with our UltraBlur backgrounds, over a dozen hypnotic visualizers, and four visual themes to satisfy every taste.
         </p>
         <p>
         FIND YOUR FIX
+
         Radios built from your library and your cooler friends' collections. Travel through time, pick a style or mood, or listen album-by-album like the purist you are. Use the Mix Builder to explore and craft your perfect blend. Explore your personal charts and see what you were into last Fall or your top albums from the 60s.
         </p>
         <p>
         OFFLINE BLISS
+
         Grab a few hours of your favorite playlist or stations with just a few taps. Download a custom mix or artist radio for the plane. Simple but powerful offline support for when you’re in the woods or run out of cellular data.
         </p>
         <p>
         IT’S THE LITTLE THINGS
+
         Powerful search. Playback activity history. Swipe-up play queue peeking. Fun artist explorations. As many settings and tweaks as our resident UXpert let us add.
         </p>
         <p>
         ENTERPRISE CLASS CUSTOMER RELATIONSHIP MANAGEMENT
+
         Just kidding. It's a music player.
         </p>
         <p>
         Follow us on Twitter @plexamp
         </p>
     </description>
+
+    <screenshots>
+        <screenshot type="default">
+            <caption>UltraBlur</caption>
+            <image>https://miro.medium.com/max/2400/1*THQg1ZT3iD5a1bbhmWuNZQ.png</image>
+        </screenshot>
+        <screenshot>
+            <caption>Aural Fixations</caption>
+            <image>https://miro.medium.com/max/2400/1*iixbMUDqZc5pJujMawSLfA.png</image>
+        </screenshot>
+        <screenshot>
+            <caption>Mix Builder</caption>
+            <image>https://miro.medium.com/max/2400/1*eIPFD5haa-Wx7hErUUl40w.png</image>
+        </screenshot>
+        <screenshot>
+            <caption>Stations</caption>
+            <image>https://miro.medium.com/max/2400/1*3NoVPUdNkCD4nJq1qG7Zwg.png</image>
+        </screenshot>
+        <screenshot>
+            <caption>Offline</caption>
+            <image>https://miro.medium.com/max/700/1*-wEITiYjnJB_06LKVRnOTA.png</image>
+        </screenshot>
+        <screenshot>
+            <caption>Search</caption>
+            <image>https://miro.medium.com/max/2400/1*OVauUzjmu3Z_03igbczfyg.png</image>
+        </screenshot>
+        <screenshot>
+            <caption>Recent Plays</caption>
+            <image>https://miro.medium.com/max/2400/1*UfJZQag7xI8tE4cbblAQWw.png</image>
+        </screenshot>
+        <screenshot>
+            <caption>More</caption>
+            <image>https://miro.medium.com/max/2400/1*hgjWqwWe4PN2Wbu4WnfDPw.png</image>
+        </screenshot>
+    </screenshots>
+
     <categories>
         <category>Audio</category>
         <category>Player</category>
         <category>Music</category>
     </categories>
+
     <url>
         <homepage>https://plexamp.com/</homepage>
         <bugtracker>https://forums.plex.tv/c/testing/plex-labs/16</bugtracker>
         <faq>https://forums.plex.tv/t/how-to-plexamp-3-0/577024</faq>
     </url>
+
     <releases>
+        <release version="3.4.3" date="2021-03-03">
+            <description>
+                <p>We’re back with a handful of important fixes, along with (we couldn’t resist), some new stuff!</p>
+                
+                <p>Added</p>
+                <ul>
+                    <li>Now-playing indicator on currently playing track.</li>
+                    <li>Next button on mini-player.</li>
+                    <li>Setting for whether AutoPlay adds to Recent Plays.</li>
+                    <li>Setting for displaying full-screen player when starting playback.</li>
+                </ul>
+
+                <p>Fixed</p>
+                <ul>
+                    <li>Attempt to reinitialize audio driver in case of failure.</li>
+                    <li>In rare cases, first play could start at an offset incorrectly.</li>
+                    <li>Missing drop shadow on downloaded and some Recent Play items.</li>
+                    <li>When queueing online tracks to an offline queue, Sweet Fades were lost.</li>
+                    <li>Allow playlist popup to be taller.</li>
+                    <li>Show spinner when searches are active.</li>
+                    <li>Improve gapless detection for multi-disc albums w/strange 1xx/2xx track indexes.</li>
+                    <li>Don’t let blocking play queue creation requests hold up subsequent ones.</li>
+                    <li>Don’t offer Mix Builder menu for recent play library items.</li>
+                    <li>Bottom half of artists in large grid weren’t tappable.</li>
+                    <li>Long press on AutoPlay card crashes.</li>
+                    <li>Speed up color extraction for UltraBlur.</li>
+                    <li>Speed up image fading.</li>
+                    <li>A handful of reported crashes.</li>
+                </ul>
+            </description>
+        </release>
         <release version="3.4.2" date="2021-02-22">
             <description>
                 <p>Most significant change under the hood is the brand new networking stack, which gives increased reliability and performance, but lots of other hopefully pleasing additions and fixes</p>
@@ -179,4 +257,5 @@
             </description>
         </release>
     </releases>
+
 </component>

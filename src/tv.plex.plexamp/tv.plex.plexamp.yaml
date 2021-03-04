@@ -19,9 +19,9 @@ modules:
     buildsystem: simple
     sources:
       - type: file
-        url: https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp-3.4.2.AppImage
+        url: https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp-3.4.3.AppImage
         dest-filename: Plexamp.AppImage
-        sha256: 819fb2d54674b3851675578bf395a7d7907320b6a5b9a11448cf9eb60d8cbe10
+        sha256: 3cd4facf7b05434f4528e2484c8d9d6bee825ee692d5d77c5fc695ec0bcbf0e7
 
       - type: file
         path: ./tv.plex.plexamp.metainfo.xml
@@ -29,7 +29,7 @@ modules:
       - type: script
         dest-filename: run.sh
         commands:
-          - /app/main/plexamp --no-sandbox "$*"
+          - exec /app/main/plexamp --no-sandbox "$*"
 
     build-commands:
       - chmod +x Plexamp.AppImage
