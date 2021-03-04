@@ -5,8 +5,6 @@ runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
 command: run.sh
 separate-locales: false
-base: org.electronjs.Electron2.BaseApp
-base-version: stable
 finish-args:
   - --share=ipc
   - --socket=x11
