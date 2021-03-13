@@ -102,6 +102,33 @@
     </url>
 
     <releases>
+        <release version="3.4.4" date="2021-03-12">
+            <description>
+                <p>Added</p>
+                <ul>
+                    <li>Escape key navigates back</li>
+                    <li>"Colorize Seekbar" setting</li>
+                    <li>Car View mode works in landscape</li>
+                </ul>
+                
+                <p>Fixed</p>
+                <ul>
+                    <li>Don't do "fast skipping" when tapping tracks in artist carousel</li>
+                    <li>Casting to Chromecast in some cases was broken</li>
+                    <li>Memory leak in player</li>
+                    <li>Stutter moving to library grid screens</li>
+                    <li>Player crash and memory leak</li>
+                    <li>Crash loading invalid URLs</li>
+                    <li>Buttons in Car View were ironically harder to tap</li>
+                    <li>Don’t show “undefined” as a source in the downloads list</li>
+                    <li>Make settings w/o explanation text easier to click/tap on</li>
+                    <li>Casting to Chromecast was broken on networks with DNS rebind protection</li>
+                    <li>Cast: Improved checking when playback fails</li>
+                    <li>Cast: Transferring cloud play queue to Sonos or Plex player failed</li>
+                    <li>Cast: Playing TIDAL items to Sonos devices didn’t work</li>
+                </ul>
+            </description>
+        </release>
         <release version="3.4.3" date="2021-03-03">
             <description>
                 <p>We’re back with a handful of important fixes, along with (we couldn’t resist), some new stuff!</p>
