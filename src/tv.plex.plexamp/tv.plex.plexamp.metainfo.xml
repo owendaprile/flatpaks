@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-    <id>tv.plex.plexamp</id>
+    <id type="desktop">tv.plex.plexamp</id>
     <name>Plexamp</name>
-    <metadata_license>LicenseRef_Proprietary</metadata_license>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>LicenseRef-Proprietary=https://www.plex.tv/about/privacy-legal/plex-terms-of-service/</project_license>
+    <developer_name>Plex</developer_name>
+    <url type="homepage">https://plexamp.com</url>
     <summary>A beautiful Plex music player for audiophiles, curators, and hipsters</summary>
 
     <description>
@@ -52,6 +55,10 @@
         <p>
         Follow us on Twitter @plexamp
         </p>
+
+        <p>
+        NOTE: This wrapper is not verified by, affiliated with, or supported by Plex.
+        </p> 
     </description>
 
     <screenshots>
@@ -163,8 +170,10 @@
         <release version="3.4.2" date="2021-02-22">
             <description>
                 <p>Most significant change under the hood is the brand new networking stack, which gives increased reliability and performance, but lots of other hopefully pleasing additions and fixes</p>
-                <p><em>Added</em></p>
-                <p>Brand new networking stack
+
+                <p>Added</p>
+
+                <p>Brand new networking stack</p>
                 <ul>
                     <li>Improved reliability/speed.</li>
                     <li>Cancelling downloads works better.</li>
@@ -172,115 +181,117 @@
                     <li>Works with DNS rebind protection.</li>
                     <li>Resilient to invalid UTF-8 in responses.</li>
                 </ul>
-                </p>
-                <p>Browsing into downloads.</p>
-                <p>Play next/Add to queue for offline play queues (downloaded and server items).</p>
-                <p>Play next/Add to queue for offline items in server play queues.</p>
-                <p>Add larger cache size values (32GB, 64GB).</p>
-                <p>Desktop: Long press on hover overlay play/pause button stops.</p>
-                <p>Long press on AutoPlay item activates it.</p>
-                <p>Add artist rating to smart playlist filters.</p>
-                <p>New larger grid size setting.</p>
-                <p>Smart playlist icon overlay.</p>
-                <p>A “search all libraries” setting.</p>
-                <p>A background colors setting which pulls from currently playing item.</p>
-                <p>Tapping/clicking on year on album page leads to album grid.</p>
+                
+                <ul>
+                    <li>Browsing into downloads.</li>
+                    <li>Play next/Add to queue for offline play queues (downloaded and server items).</li>
+                    <li>Play next/Add to queue for offline items in server play queues.</li>
+                    <li>Add larger cache size values (32GB, 64GB).</li>
+                    <li>Desktop: Long press on hover overlay play/pause button stops.</li>
+                    <li>Long press on AutoPlay item activates it.</li>
+                    <li>Add artist rating to smart playlist filters.</li>
+                    <li>New larger grid size setting.</li>
+                    <li>Smart playlist icon overlay.</li>
+                    <li>A “search all libraries” setting.</li>
+                    <li>A background colors setting which pulls from currently playing item.</li>
+                    <li>Tapping/clicking on year on album page leads to album grid.</li>
+                </ul>
 
-                <p><em>Fixed</em></p>
-                <p>The “Refresh Downloads” setting was broken (always on).</p>
-                <p>Audible glitch at end of some AIFF files.</p>
-                <p>Play Next / Add to Queue menu actions for downloads.</p>
-                <p>Downloads of multiple items with overlapping tracks wouldn’t complete.</p>
-                <p>Fix downloads from collection et. al. library action bar.</p>
-                <p>Respect limits when downloading regular playlists.</p>
-                <p>Improve layout of playlist popup for small sizes.</p>
-                <p>Make sure downloaded artwork is at full size.</p>
-                <p>Allow casting popup to shrink horizontally a bit more.</p>
-                <p>Group/de-dupe popular tracks for recommended track area.</p>
-                <p>When playing from artist popular tracks, de-dupe based on title.</p>
-                <p>Aural Fixation play action was broken.</p>
-                <p>Header text was clipped on album page with non-standard font sizes.</p>
-                <p>Don’t generate a next album for V/A albums.</p>
-                <p>When downloaded items refresh offline, don’t show spinner.</p>
-                <p>Improve some settings text.</p>
-                <p>Increase chromecast connection timeout to 20 seconds.</p>
-                <p>Album screen wasn’t showing TIDAL recommendations.</p>
-                <p>Tapping/clicking on list item quickly could lead to duplicate screens.</p>
-                <p>A few reported crashes.</p>
-                <p>Deleting tracks from playlists wasn’t working.</p>
-                <p>Detect a few more errors when casting.</p>
-                <p>Fix swipe-to-delete appearing on all track lists.</p>
-                <p>Crash on Mix Builder actions in Recent Plays.</p>
-                <p>Improve usability of playlist dialog for creating new playlists.</p>
+                <p>Fixed</p>
+                <ul>
+                    <li>The “Refresh Downloads” setting was broken (always on).</li>
+                    <li>Audible glitch at end of some AIFF files.</li>
+                    <li>Play Next / Add to Queue menu actions for downloads.</li>
+                    <li>Downloads of multiple items with overlapping tracks wouldn’t complete.</li>
+                    <li>Fix downloads from collection et. al. library action bar.</li>
+                    <li>Respect limits when downloading regular playlists.</li>
+                    <li>Improve layout of playlist popup for small sizes.</li>
+                    <li>Make sure downloaded artwork is at full size.</li>
+                    <li>Allow casting popup to shrink horizontally a bit more.</li>
+                    <li>Group/de-dupe popular tracks for recommended track area.</li>
+                    <li>When playing from artist popular tracks, de-dupe based on title.</li>
+                    <li>Aural Fixation play action was broken.</li>
+                    <li>Header text was clipped on album page with non-standard font sizes.</li>
+                    <li>Don’t generate a next album for V/A albums.</li>
+                    <li>When downloaded items refresh offline, don’t show spinner.</li>
+                    <li>Improve some settings text.</li>
+                    <li>Increase chromecast connection timeout to 20 seconds.</li>
+                    <li>Album screen wasn’t showing TIDAL recommendations.</li>
+                    <li>Tapping/clicking on list item quickly could lead to duplicate screens.</li>
+                    <li>A few reported crashes.</li>
+                    <li>Deleting tracks from playlists wasn’t working.</li>
+                    <li>Detect a few more errors when casting.</li>
+                    <li>Fix swipe-to-delete appearing on all track lists.</li>
+                    <li>Crash on Mix Builder actions in Recent Plays.</li>
+                    <li>Improve usability of playlist dialog for creating new playlists.</li>
+                </ul>
             </description>
         </release>
         <release version="3.4.1" date="2021-01-19">
             <description>
                 <p>Lots of improvements for a 0.0.1 version change, which shows how big our plans are for the app!</p>
-                <p>
-                Added
-                </p>
-                <p>
-                Top Tracks aural fixation.
-                Speed up context menus and screen transitions.
-                Artist and album page styles/moods lead to library grid.
-                Mood/style station album browsing goes to library grid.
-                Remember last active tab.
-                Allow long press on play button to stop playback.
-                Allow signing in with 2FA.
-                Album user rating as filter field.
-                Show artist’s own popular/highly rated tracks in Related Tracks.
-                Add setting to disable library action bar blurred background.
-                </p>
-                <p>
-                Fixed
-                </p>
-                <p>
-                TIDAL playlists in Recent Plays didn’t have a poster image.
-                Occasionally audio would glitch at the start of playback.
-                Improve buffering with TIDAL items on low bandwidth connections.
-                Car: Fix double player animation for offline items.
-                Occasionally swipe-to-delete rows weren’t tappable.
-                Fix downloaded poster resolution.
-                Fix corruption with offline images (and possibly others).
-                Pending download count on tab could be different from total for items.
-                When sorting tracks by popularity, de-dupe by title.
-                Get rid of extra blank line in artist grids.
-                Properly sort downloaded items with leading “the”, “a”, etc.
-                Playing a track from library view played the album instead of queuing tracks around it.
-                Fix spacing above artist/album carousels.
-                Don’t show drop shadows until image loads, fixes weird hexagons on Android.
-                Allow deleting tracks from dumb playlists again.
-                In some cases Discovery Radio wouldn’t start.
-                The zero state text for “Best Of” Aural Fixation included the word “false”.
-                iOS: Raise buffer sizes a bit for playback stability.
-                iOS: Fix playback stopping issue in low battery/power situations.
-                iOS: Allow smaller window sizes when running on macOS.
-                iOS: Fix visualizer breaking on rotation (and sometimes returning from background) on iPad.
-                iOS: Avoid running visualizer when app is in background.
-                Android: Fix a reported media browser crash.
-                Android: Fix issue with status bar occasionally losing translucency.
-                Show TIDAL icon on albums added to library.
-                Show TIDAL icon in player for items added to library.
-                Remove year from AutoPlay albums added to Recent Plays.
-                Make sure the sort is stable for Recent Play items.
-                Allow adding TIDAL items in library to TIDAL play queue.
-                AutoPlay didn’t work when casting.
-                Android: AutoPlay didn’t work in Android Auto.
-                Android: In landscape mode, player wasn’t vertically centered.
-                Android: Fix some cases of notifications acting weirdly.
-                Downloaded playlists showed a generic icon instead of artwork.
-                Attempt to improve reliability of debug log sharing.
-                Android: Lack of icon on headphone notification.
-                Silent audio (snap-back) after restarting audio device due to failure.
-                iOS: Better clearing of now playing data when stopping.
-                Desktop: Improve playback stability.
-                In some cases a small bit of audio would come out of the speaker when disconnecting from Bluetooth.
-                Wait to render Related Tracks until tab is active (helps performance).
-                iOS: Raise buffer a bit to make playback more stable.
-                In themes other than dark, group titles on downloads could be invisible.
-                Playlist items in grid didn’t change title color along with theme.
-                </p>
+
+                <p>Added</p>
+                <ul>
+                    <li>Top Tracks aural fixation.</li>
+                    <li>Speed up context menus and screen transitions.</li>
+                    <li>Artist and album page styles/moods lead to library grid.</li>
+                    <li>Mood/style station album browsing goes to library grid.</li>
+                    <li>Remember last active tab.</li>
+                    <li>Allow long press on play button to stop playback.</li>
+                    <li>Allow signing in with 2FA.</li>
+                    <li>Album user rating as filter field.</li>
+                    <li>Show artist’s own popular/highly rated tracks in Related Tracks.</li>
+                    <li>Add setting to disable library action bar blurred background.</li>
+                </ul>
+
+                <p>Fixed</p>
+                <ul>
+                    <li>TIDAL playlists in Recent Plays didn’t have a poster image.</li>
+                    <li>Occasionally audio would glitch at the start of playback.</li>
+                    <li>Improve buffering with TIDAL items on low bandwidth connections.</li>
+                    <li>Car: Fix double player animation for offline items.</li>
+                    <li>Occasionally swipe-to-delete rows weren’t tappable.</li>
+                    <li>Fix downloaded poster resolution.</li>
+                    <li>Fix corruption with offline images (and possibly others).</li>
+                    <li>Pending download count on tab could be different from total for items.</li>
+                    <li>When sorting tracks by popularity, de-dupe by title.</li>
+                    <li>Get rid of extra blank line in artist grids.</li>
+                    <li>Properly sort downloaded items with leading “the”, “a”, etc.</li>
+                    <li>Playing a track from library view played the album instead of queuing tracks around it.</li>
+                    <li>Fix spacing above artist/album carousels.</li>
+                    <li>Don’t show drop shadows until image loads, fixes weird hexagons on Android.</li>
+                    <li>Allow deleting tracks from dumb playlists again.</li>
+                    <li>In some cases Discovery Radio wouldn’t start.</li>
+                    <li>The zero state text for “Best Of” Aural Fixation included the word “false”.</li>
+                    <li>iOS: Raise buffer sizes a bit for playback stability.</li>
+                    <li>iOS: Fix playback stopping issue in low battery/power situations.</li>
+                    <li>iOS: Allow smaller window sizes when running on macOS.</li>
+                    <li>iOS: Fix visualizer breaking on rotation (and sometimes returning from background) on iPad.</li>
+                    <li>iOS: Avoid running visualizer when app is in background.</li>
+                    <li>Android: Fix a reported media browser crash.</li>
+                    <li>Android: Fix issue with status bar occasionally losing translucency.</li>
+                    <li>Show TIDAL icon on albums added to library.</li>
+                    <li>Show TIDAL icon in player for items added to library.</li>
+                    <li>Remove year from AutoPlay albums added to Recent Plays.</li>
+                    <li>Make sure the sort is stable for Recent Play items.</li>
+                    <li>Allow adding TIDAL items in library to TIDAL play queue.</li>
+                    <li>AutoPlay didn’t work when casting.</li>
+                    <li>Android: AutoPlay didn’t work in Android Auto.</li>
+                    <li>Android: In landscape mode, player wasn’t vertically centered.</li>
+                    <li>Android: Fix some cases of notifications acting weirdly.</li>
+                    <li>Downloaded playlists showed a generic icon instead of artwork.</li>
+                    <li>Attempt to improve reliability of debug log sharing.</li>
+                    <li>Android: Lack of icon on headphone notification.</li>
+                    <li>Silent audio (snap-back) after restarting audio device due to failure.</li>
+                    <li>iOS: Better clearing of now playing data when stopping.</li>
+                    <li>Desktop: Improve playback stability.</li>
+                    <li>In some cases a small bit of audio would come out of the speaker when disconnecting from Bluetooth.</li>
+                    <li>Wait to render Related Tracks until tab is active (helps performance).</li>
+                    <li>iOS: Raise buffer a bit to make playback more stable.</li>
+                    <li>In themes other than dark, group titles on downloads could be invisible.</li>
+                    <li>Playlist items in grid didn’t change title color along with theme.</li>
+                </ul>
             </description>
         </release>
     </releases>
